@@ -41,6 +41,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
 /* index */
 .intro-bg{
 	
@@ -50,10 +51,45 @@ table {
 }
 
 .intro-logo{
-	margin: 0 auto;
-	width: 160px;
-	height: 120px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -220px 0 0 -120px;
 }
+.intro-logo__pic{
+	width: 235px;
+	height: 290px;
+}
+.intro-button{
+	width: 230px;
+	height: 57px;
+    position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: 115px 0 0 -115px;
+	
+}
+
+.intro-button__link{
+	width: 230px;
+	height: 57px;
+	display: block;
+	text-decoration: none;
+	font-family: "Open Sans Bold" , Arial, Helvetica, sans-serif;
+	color: #fff;
+	text-transform: uppercase;
+	line-height: 3.4;
+	background: #f89513;
+	border-radius: 4px;
+	text-align: center;
+}
+
+.intro-button__link:hover{
+	background: #131415;
+	
+}
+
+
 /* services */
 .header{
 	width: 100%;
@@ -149,6 +185,7 @@ table {
 	font-size: 12px;
 	line-height: 38px;
     color: #f89513;
+    text-transform: uppercase;
 	
 }
 
