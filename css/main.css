@@ -1,47 +1,17 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+body, html{
+	height: 100%;
 }
 
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+.wrapper{
+	min-height: 100%;
+	overflow: hidden;
+	min-width: 1100px;
+}
+.wrapper:after{
+	content: "";
 	display: block;
+	height: 80px;
 }
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
 /* index */
 .intro-bg{
 	
@@ -88,6 +58,84 @@ table {
 	background: #131415;
 	
 }
+
+/*about*/
+.content{
+	width: 880px;
+	float: right;
+	position: relative;
+}
+
+.content-image{
+	width: 880px;
+	height: 355px;
+	background: url(../images/weightlifter.png) no-repeat;
+}
+
+.content-text{
+	position: absolute;
+	top: 160px;
+	left: 68px;
+	font-family: "Open Sans Bold";
+	font-size: 49px;
+	color: #fff;
+	text-transform: uppercase;
+
+}
+
+.description-company{
+	margin-top: 35px;
+}
+
+.description-company__text{
+	width: 690px;
+	font-family: "Open Sans Light";
+	font-size: 18px;
+	line-height: 30px;
+}
+
+.bold-text{
+	font-family: "Open Sans Bold";
+}
+
+.description-company__text ul{
+	list-style-type: disc;
+	margin-left:  45px;
+	margin-bottom: 30px;
+}
+
+.description-company__text_border{
+	width: 700px;
+	height: 144px;
+	color: #fff;
+	font-family: "Open Sans Light";
+	font-size: 18px;
+	background: #131415;
+}
+
+.border-text{
+	padding: 13px 30px 20px 30px;
+}
+
+.title__partners{
+	font-family: "Open Sans Bold";
+	font-size: 49px;
+	text-transform: uppercase;
+	color: #221f1f;
+	margin-top: 70px;
+}
+
+
+
+.partners__item{
+	width: 150px;
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: 60px;
+	margin-right: 140px;
+
+}
+
 
 
 /* services */
@@ -150,7 +198,8 @@ table {
 }
 
 .header{
-	margin-bottom: 46px;
+	height: 76px;
+	
 }
 .header__logo{
 	float: left;
@@ -167,6 +216,7 @@ table {
 	text-transform: uppercase;
 	letter-spacing: 1.8px;
 	color: #f89513;
+	text-decoration: none;
 }
 
 .header__info{
@@ -200,6 +250,7 @@ table {
 }
 
 .breadcrumbs{
+	margin-top: 48px;
 	margin-bottom: 25px;
 }
 
@@ -207,10 +258,20 @@ table {
 	display: inline-block;
 }
 
+.breadcrumbs__item:after{
+	content: '/';
+}
+
+.breadcrumbs__item:last-child:after{
+	display: none;
+}
+
 .breadcrumbs__link{
 	font-size: 14px;
-	font-family:"Open Sans Light italic", Arial, Helvetica, sans-serif;
-	color: #fbcb9f;
+	font-style: italic;
+	font-weight: 300;
+	color: #f9960a;
+
 }
 
 .breadcrumbs__link_active{
@@ -246,7 +307,8 @@ table {
 	display: inline-block;
 	vertical-align: top;
 	margin-bottom: 51px;
-	margin-left: 25px;
+	margin-right: 35px;
+	
 
 }
 
@@ -267,14 +329,19 @@ table {
  	font-size: 12px;
  	font-family: "Open Sans Light";
  	line-height: 18px;
- 	margin-right: 50px;
+ 	
 }
 
 .sidebar__menu{
 	width: 105px;
-	float: right;
+	float: left;
 }
-
+.sidebar__menu-list{
+    margin: 0;
+	padding: 0;
+	list-style: none;
+	margin-top: 42px;
+}
 .sidebar__menu-text{
 	margin-bottom:40px;
 	font-family: "Open Sans Bold", Arial, Helvetica, sans-serif;
@@ -283,7 +350,11 @@ table {
 	letter-spacing: 2px;
     color: #f89513;
     text-transform: uppercase;
+    margin-left: 8px;
 
+}
+.sidebar__menu-text_balck{
+	color: #000;
 }
 
 .sidebar__menu-link{
@@ -292,6 +363,7 @@ table {
 
 .sidebar__menu-item{
 	margin-bottom: 25px;
+	
 }
 
 .sidebar__menu-item:hover .sidebar__menu-text{
@@ -299,14 +371,19 @@ table {
 }
 
 .sidebar__menu-item:hover .sidebar__icon_bolt{
+	background-image: url(../images/icons/black_bolt.png);
+}
 
+.sidebar__menu-item:hover .sidebar__icon_star{
+	background-image: url(../images/icons/black_star.png);
 }
 
 .sidebar__icon{
-	width: 28px;
+	width: 22px;
     height: 20px;
     display: inline-block;
     vertical-align: middle;
+
 }
 
 .sidebar__icon_bolt{
@@ -316,7 +393,15 @@ table {
 	background: url(../images/icons/dumbbel.png) center center no-repeat;
 }
 .sidebar__icon_star{
-		background: url(../images/icons/star.png) center center no-repeat;
+	background: url(../images/icons/star.png) center center no-repeat;
+}
+
+.sidebar__icon-bolt_black{
+	background: url(../images/icons/black_bolt.png) center center no-repeat;
+}
+
+.sidebar__icon_dumbbel_light{
+	background: url(../images/icons/light_dumbbel.png) center center no-repeat;
 }
 
 
@@ -325,16 +410,31 @@ table {
 	height: 80px;
 	background-color: #131415;
 	color: #fff;
+	margin-top: -80px;
+	min-width: 1100px;
 }
 
 .footer__info{
 	float: left;
-	width: 257px;
+	width: 33.3%;
+	font-size: 14px;
+    line-height: 20px;
+    font-family: "Open Sans Light";
+   margin-top: 12px;
 }
-.footer__info-text{
-    font-size: 14px;
-    line-height: 18px;
+
+.footer__info-link{
+	color: #fff;
+	font-weight: bold;
 }
+
+.footer__logo{
+	float: left;
+	width: 33.3%;
+	text-align: center;
+	margin-top: 30px;
+}
+
 
 .footer__logo-text{
 	width: 160px;
@@ -344,22 +444,53 @@ table {
 	text-transform: uppercase;
 	letter-spacing: 1.8px;
 	color: #f89513;
+	text-decoration: none;
 }
 
 .socials{
 	float: right;
-	width: 197px;
+	width: 33.3%;
+	margin-top: 20px;
+	
 }
 
 .socials__title{
+	margin-right: 20px;
+	float: right;
+	
+}
+
+.socials__title-text{
 	font-size: 14px;  
 	font-family: "Open Sans Bold", Arial, Helvetica, sans-serif;
-	
+}
+
+.socials__icons{
+	float: right;
+	margin-right: 20px;
+	height: 10px;
+	margin-top: 5px;
+}
+
+.socials__list{
+	height: 10px;
+	margin-top: 5px;
+	margin-right: 15px;
 }
 
 .socials__item{
 	display: inline-block;
     width: 20px;
     height: 20px;
-        margin-right: 8px;
+    margin-right: 8px;
+    background-color: #d0d0d0;
+    border-radius: 50%;
+    margin: 0 6px 0 0;
 }
+ .socials__icon{
+ 	margin-left: 3px;
+ }
+
+ .socials__item:hover{
+ 	background-color: #f89513;
+ }
