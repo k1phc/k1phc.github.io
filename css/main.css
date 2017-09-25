@@ -2,6 +2,8 @@ body, html{
 	height: 100%;
 }
 
+
+
 .wrapper{
 	min-height: 100%;
 	overflow: hidden;
@@ -130,10 +132,69 @@ body, html{
 .partners__item{
 	width: 150px;
 	display: inline-block;
-	vertical-align: top;
+	vertical-align: middle;
 	margin-bottom: 60px;
-	margin-right: 140px;
+	margin-right: 120px;
+}
 
+.partners__img{
+	display: block;
+    position: relative;
+    overflow: hidden;
+    width: 160px;
+    height: 63px;
+}
+
+.partners__img--flamingo{
+	background: url(../images/flamingo.png) center center no-repeat;
+}
+
+.partners__img--malibu{
+	background: url(../images/malibu.png) center center no-repeat;
+}
+
+.partners__img--lion{
+	background: url(../images/lion.png) center center no-repeat;
+}
+
+.partners__img--arni{
+	background: url(../images/arni.png) center center no-repeat;
+}
+
+.partners__img--grif{
+	background: url(../images/grif.png) center center no-repeat;
+}
+
+.partners__img--atletica{
+	background: url(../images/atletica.png) center center no-repeat;
+}
+
+.partners__img--flamingo:hover{
+	background: url(../images/flamingo_color.png) center center no-repeat;
+}
+
+.partners__img--malibu:hover{
+	background: url(../images/malibu_color.png) center center no-repeat;
+}
+
+.partners__img--lion:hover{
+	background: url(../images/lion_color.png) center center no-repeat;
+}
+
+.partners__img--arni:hover{
+	background: url(../images/arni_color.png) center center no-repeat;
+}
+
+.partners__img--grif:hover{
+	background: url(../images/grif_color.png) center center no-repeat;
+}
+
+.partners__img--atletica:hover{
+	background: url(../images/atletica_color.png) center center no-repeat;
+}
+
+.description-company__text p{
+	margin-bottom: 20px;
 }
 
 
@@ -142,7 +203,7 @@ body, html{
 .header{
 	width: 100%;
 	height: 76px;
-	background-color: #131415
+	background-color: #131415;
 }
 
 @font-face {
@@ -220,8 +281,10 @@ body, html{
 }
 
 .header__info{
-	float: right;
-	padding-right: 22px
+	width: 181px;
+    height: 75px;
+    float: right;
+    position: relative;
 }
 
 .header__phone{
@@ -230,6 +293,7 @@ body, html{
 	font-size: 21px;
 	font-weight: 700;
 	line-height: 54px;
+	display: inline-block;
 	
 }
 
@@ -239,15 +303,41 @@ body, html{
 }
 
 .header__schedule{
-	padding-top: 6px;
+	display: inline-block;
+	position: absolute;
+	top: 40px;
+	left: 55px;
+	background-color: #131415;
 	text-align: right;
 	font-family: "Open Sans Bold", Arial, Helvetica, sans-serif;
 	font-size: 14px;
 	font-weight: 700;
-	line-height: 54px;
 	text-decoration: underline;
+	border: none;
 	color: #ae6914;
 }
+
+.schedule{
+    color: #221f1f;
+    position: absolute;
+    font-size: 14px;
+    left: 13px;
+    top: 67px;
+    width: 126px;
+    height: 46px;
+    padding: 28px 22px 18px;
+    z-index: 54;  
+    background: url(../images/schedule.png) center center no-repeat;
+}
+
+.schedule__time{
+	font-family: "Open Sans Bold";
+	color: #f89513;
+    display: block;
+    margin-bottom: 10px;
+}
+
+
 
 .breadcrumbs{
 	margin-top: 48px;
