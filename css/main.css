@@ -4,6 +4,8 @@ body, html{
 
 
 
+
+
 .wrapper{
 	min-height: 100%;
 	overflow: hidden;
@@ -54,6 +56,7 @@ body, html{
 	background: #f89513;
 	border-radius: 4px;
 	text-align: center;
+	transition: 1s;
 }
 
 .intro-button__link:hover{
@@ -143,6 +146,7 @@ body, html{
     overflow: hidden;
     width: 160px;
     height: 63px;
+    transition: 1s;
 }
 
 .partners__img--flamingo{
@@ -449,23 +453,32 @@ body, html{
 
 .sidebar__menu-link{
 	text-decoration: none;
+
+
 }
 
 .sidebar__menu-item{
 	margin-bottom: 25px;
-	
+
 }
 
 .sidebar__menu-item:hover .sidebar__menu-text{
 	color: #131415;
+	transition: 1s;
 }
 
 .sidebar__menu-item:hover .sidebar__icon_bolt{
 	background-image: url(../images/icons/black_bolt.png);
+	transition: 1s;
+}
+.sidebar__menu-item:hover .sidebar__icon_dumbbel_light{
+	background-image: url(../images/icons/dumbbel.png);
+	transition: 1s;
 }
 
 .sidebar__menu-item:hover .sidebar__icon_star{
 	background-image: url(../images/icons/black_star.png);
+	transition: 1s;
 }
 
 .sidebar__icon{
@@ -484,6 +497,9 @@ body, html{
 }
 .sidebar__icon_star{
 	background: url(../images/icons/star.png) center center no-repeat;
+}
+.sidebar__icon_star-black{
+	background: url(../images/icons/black_star.png) center center no-repeat;
 }
 
 .sidebar__icon-bolt_black{
@@ -575,12 +591,90 @@ body, html{
     margin-right: 8px;
     background-color: #d0d0d0;
     border-radius: 50%;
-    margin: 0 6px 0 0;
+    text-align: center;
+    transition: 1s;
 }
- .socials__icon{
- 	margin-left: 3px;
- }
-
+ 
  .socials__item:hover{
  	background-color: #f89513;
  }
+
+ /*comments*/
+
+ .comments__avatar{
+ 	float: left;
+    margin-right: 20px;
+    width: 160px;
+    height: 160px;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: #f5f5f6;
+ }
+ 
+ .comments__text{
+ 	font-family: "Open Sans Light";
+ 	font-size: 18px;
+ 	margin-bottom: 50px;
+ 	float: left;
+ 	width: 688px;
+ }
+
+ .comments__date{
+ 	font-size: 14px;
+ 	color: #979797;
+ 	margin-bottom: 6px;
+ }
+
+ .comments__name{
+ 	font-weight: bold;
+ 	margin-bottom: 15px;
+ }
+
+ .comments__desc{
+ 	line-height: 30px;
+ }
+
+ .pagination{
+ 	text-align: center;
+ 	margin: 10px 10px;
+ }
+ .pagination__title{
+ 	display: inline-block;
+ 	font-size: 14px;
+ 	font-family: "Open Sans Light";
+}
+
+.pagination__button{
+	display: inline-block;
+	vertical-align: middle;
+	color: #221f1f;
+	text-decoration: none;
+}
+
+.pagination__list {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.pagination__item {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.pagination__link{
+	text-decoration: none;
+	width: 25px;
+	height: 25px;
+	font-size: 14px;
+	line-height: 25px;
+	color: #221f1f;
+	display: block;
+	transition: .5s;
+	font-family: "Open Sans Bold";
+}
+
+.pagination__link:hover{
+	background-color: #131415;
+	color: #f89513;
+	border-radius: 4px;
+}
