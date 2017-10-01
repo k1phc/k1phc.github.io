@@ -24,16 +24,18 @@
                             8 (800) 00-392-10
                         </a>
                     </div>
-                    <button class="header__schedule">
-                        График работы
-                    </button>
-                    <div class="schedule">
-                        <span class="schedule__time">
+                    <div class="dropdown">
+                        <button class="header__schedule">
+                            График работы
+                        </button>
+                        <div class="schedule">
+                            <span class="schedule__time">
                         пн-вс: 09:00-20:00
                         </span>
-                        <span class="schedule__lunch">
+                            <span class="schedule__lunch">
                         обед: 14:00-14:30
                         </span>
+                        </div>
                     </div>
                 </adress>
             </div>
@@ -127,10 +129,10 @@
                         <div class="pagination__title">
                             Страница 1 из 7
                         </div>
-                        <a href="#" class="pagination__button pagination__button_prev">
+                        <a href="#" class="pagination__button pagination__button-prev">
                             < </a>
                                 <ul class="pagination__list">
-                                    <li class="pagination__item pagination__item_active">
+                                    <li class="pagination__item pagination__item-active">
                                         <a href="#" class="pagination__link">
                                         1
                                        </a>
@@ -168,6 +170,53 @@
                                 </ul>
                                 <a href="#" class="pagination__button pagination__button_next">></a>
                     </div>
+                    <section class="form-section">
+                        <div class="form">
+                            <h2 class="title title__form">Оставить отзыв</h2>
+                            <div class="form__fields">
+                                <form class="form__tag">
+                                    <div class="form__inputs">
+                                        <div class="form__row">
+                                            <div class="form__elem">
+                                                <label for="form__elem-title">Ваше имя</label>
+                                                <input type="text" class="form__input" placeholder="Андрей">
+                                            </div>
+                                            <div class="form__elem">
+                                                <label for="form__elem-title">Ссылка на профиль VK</label>
+                                                <input type="text" class="form__input" placeholder="vk.com/example">
+                                            </div>
+                                        </div>
+                                        <div class="form__row">
+                                            <div class="form__textarea">
+                                                <label for="form__elem-title">Текст отзыва</label>
+                                                <textarea class="form__textarea-text" placeholder="Мне понравилось"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__buttons">
+                                        <div class="form__radios">
+                                            <div class="form__radios-title">Отображать фото в отзыве?</div>
+                                            <div class="form__radios-container">
+                                                <div class="form__radio">
+                                                    <input type="radio" class="form__radio-elem" checked>
+                                                    <label for="form__radio-name">Да</label>
+                                                </div>
+                                                <div class="form__radio">
+                                                    <input type="radio" class="form__radio-elem">
+                                                    <label for="form__radio-name">Нет</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__submit">
+                                        <button type="submit" class="form__button">
+                                            <span class="form__button-text">Отправить</span>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
                 </div>
                 <nav class="sidebar__menu">
                     <ul class="sidebar__menu-list">

@@ -3,9 +3,6 @@ body, html{
 }
 
 
-
-
-
 .wrapper{
 	min-height: 100%;
 	overflow: hidden;
@@ -306,11 +303,15 @@ body, html{
 	text-decoration: none;
 }
 
+.dropdown{
+	position: relative;
+}
 .header__schedule{
 	display: inline-block;
-	position: absolute;
-	top: 40px;
-	left: 55px;
+	cursor: pointer;
+	position: relative;
+	top: 4px;
+	left: 50px;
 	background-color: #131415;
 	text-align: right;
 	font-family: "Open Sans Bold", Arial, Helvetica, sans-serif;
@@ -319,19 +320,27 @@ body, html{
 	text-decoration: underline;
 	border: none;
 	color: #ae6914;
+	transition: .5s;
 }
 
 .schedule{
     color: #221f1f;
     position: absolute;
     font-size: 14px;
-    left: 13px;
-    top: 67px;
+    left: -9999px;
+    top: 27px;
     width: 126px;
     height: 46px;
     padding: 28px 22px 18px;
-    z-index: 54;  
+    z-index: 1;  
     background: url(../images/schedule.png) center center no-repeat;
+}
+.header__schedule:hover{
+	color: #b9b9b9;
+}
+.dropdown:hover .schedule{
+	display: block;
+	left: 13px;
 }
 
 .schedule__time{
@@ -651,6 +660,7 @@ body, html{
 	text-decoration: none;
 }
 
+
 .pagination__list {
   display: inline-block;
   vertical-align: middle;
@@ -660,6 +670,8 @@ body, html{
   display: inline-block;
   vertical-align: middle;
 }
+
+
 
 .pagination__link{
 	text-decoration: none;
@@ -671,10 +683,117 @@ body, html{
 	display: block;
 	transition: .5s;
 	font-family: "Open Sans Bold";
+	text-align: center;
+	transition: .5s;
 }
 
 .pagination__link:hover{
-	background-color: #131415;
 	color: #f89513;
 	border-radius: 4px;
+}
+.pagination__item-active .pagination__link {
+  color: #f89513;
+  background-color: #131415;
+  border-radius: 3px;
+}
+
+.form-section{
+	width: 700px;
+	background-color: #f5f5f5;
+	border-radius: 3px;
+	margin-bottom: 72px;
+	
+
+}
+.title__form{
+	padding-top: 40px;
+	margin-bottom: 5px;
+	
+}
+.form{
+	padding-left: 40px;
+}
+.form__fields{
+	font-family: "Open Sans Light";
+	font-weight: 300;
+}
+
+
+
+.form__elem{
+	display: inline-block;
+	margin-top: 20px;
+	margin-right: 24px;
+}
+
+.form__elem-title{
+	display: inline-block;
+
+}
+
+.form__input{
+	width: 270px;
+	height: 44px;
+	border: none;
+	display: block;
+	padding-left: 8px;
+	font-size: 14px;
+	margin-top: 10px;
+}
+
+.form__textarea{
+	margin-top: 22px;
+}
+
+.form__textarea-text{
+	display: block;
+	width: 560px;
+	height: 90px;
+	border: 1px solid #f89513;
+	border-radius: 3px;
+	margin-top: 10px;
+	padding: 10px 10px;
+}
+
+.form__buttons{
+	margin-top: 20px;
+	display: inline-block;
+}
+
+.form__radio{
+	float: left;
+	margin-top: 10px;
+	margin-right: 20px;
+}
+
+
+
+
+
+.form__submit{
+	float: right;
+	margin-right: 80px;
+	margin-top: 20px;
+}
+
+.form__button{
+	width: 124px;
+	height: 44px;
+	background-color: #1c1f1d;
+	border: 1px solid #1c1f1d;
+	border-radius: 3px;
+	transition: .5s;
+}
+.form__button-text{
+	color: #dfdfdf;
+	font-family: "Open"Sans;
+	font-size: 14px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.form__button:hover{
+	background-color: #f89513;
+	border: 1px solid #f89513;
+	cursor: pointer;	
 }
