@@ -618,6 +618,13 @@ body, html{
     overflow: hidden;
     border-radius: 50%;
     background-color: #f5f5f6;
+
+ }
+ .comments__avatar-afrodita{
+ 	position: relative;
+ 	top: 20px;
+ 	left: 35px;
+    
  }
  
  .comments__text{
@@ -796,4 +803,48 @@ body, html{
 	background-color: #f89513;
 	border: 1px solid #f89513;
 	cursor: pointer;	
+}
+
+.form__radio-elem:not(checked){
+	position: absolute;
+	opacity: 0;
+}
+.form__radio-elem:not(checked) + .form__radio-name{
+	position: relative;
+	padding: 0 20px 0 25px;
+}
+.form__radio-elem:not(checked) + .form__radio-name:before{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	border: 1px solid #cccccc;
+	border-radius: 50%;
+	background-color: #f6f6f6;
+	color: #221f1f;
+}
+
+.form__radio-elem:not(checked) + .form__radio-name:after{
+	content: "";
+	position: absolute;
+	top: 7px;
+	left: 7px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: #f8960b;
+	color: #f8960b;
+	transition: .2s;
+}
+
+.form__radio-elem:checked + .form__radio-name:before{
+	border: 1px solid #f8960b;
+}
+.form__radio-elem:checked + .form__radio-name:after{
+	opacity: 1;
+}
+.form__radio-elem:checked + .form__radio-name{
+	color: #f8960b;
 }
