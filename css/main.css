@@ -21,6 +21,13 @@ body, html{
     background-size: cover;
 }
 
+.intro-container{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
 .intro-logo{
 	position: absolute;
 	top: 50%;
@@ -593,6 +600,13 @@ body, html{
 	margin-right: 15px;
 }
 
+
+.socials__icon-fb{
+	margin: 4px 7px 3px 7px;
+}
+.socials__icon-google, .socials__icon-twitter{
+	margin-left: 2px;
+}
 .socials__item{
 	display: inline-block;
     width: 20px;
@@ -601,8 +615,10 @@ body, html{
     background-color: #d0d0d0;
     border-radius: 50%;
     text-align: center;
+    overflow: hidden;
     transition: 1s;
 }
+
  
  .socials__item:hover{
  	background-color: #f89513;
