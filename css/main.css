@@ -373,10 +373,11 @@ body, html{
 
 .schedule__time{
 	font-family: "Open Sans Bold";
+	font-size: 14px;
 	color: #f89513;
     display: block;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 12px;
 }
 
 .schedule__lunch{
