@@ -334,30 +334,56 @@ body, html{
 }
 
 .schedule{
-    color: #221f1f;
     position: absolute;
-    font-size: 14px;
-    left: -9999px;
-    top: 27px;
-    width: 126px;
-    height: 46px;
-    padding: 28px 22px 18px;
-    z-index: 1;  
-    background: url(../images/schedule.png) center center no-repeat;
+    text-align: left;
+    opacity: 0;
+    left: -99999px;
+    top: 100%;
+    width: 163px;
+    min-height: 71px;
+    margin-top: 17px;
+    z-index: 2;
+    box-shadow: 0 0 13px #221f1f;
+    background-color: #fff;
+    border-radius: 4px;
+    transition: opacity .7s;
+
+ }
+
+.schedule:before{
+	content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+    border-bottom: 8px solid #fff;
+    right: 2px;
+    top: -8px;
 }
+
 .header__schedule:hover{
 	color: #b9b9b9;
 }
 .dropdown:hover .schedule{
 	display: block;
 	left: 33px;
+	opacity: 1;
 }
 
 .schedule__time{
 	font-family: "Open Sans Bold";
 	color: #f89513;
     display: block;
-    margin-bottom: 10px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.schedule__lunch{
+	display: block;
+	text-align: center;
+	margin-top: 10px;
+
 }
 
 
@@ -792,12 +818,10 @@ body, html{
 }
 
 .form__radio{
-	float: left;
+	display: inline-block;
 	margin-top: 10px;
 	margin-right: 20px;
 }
-
-
 
 
 
@@ -829,46 +853,41 @@ body, html{
 	cursor: pointer;	
 }
 
+.form__radio-name {
+    position: relative;
+}
+	
+.form__radio-elem{
+	position: absolute;
+	left: -9999px;
+}
 
-input [type=radio]{
-	vertical-align: top;
-	width: 17px;
-	height: 17px;
-	margin: 0 3px 0 0;
+.form__radio-new{
+	display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    border: 1px solid #f89513;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;    
 }
-input [type=radio]+ label {
-	cursor: pointer;
+
+.form__radio-new:after{
+	content: "";
+    position: absolute;
+    background-color: #f89513;
+    border-radius: 50%;   
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
 }
-input[type=radio]:not(checked) {
-	position: absolute;
-	opacity: 0;
+
+.form__radio-elem:checked + .form__radio-new:after{
+	width: 8px;
+	height: 8px;
+
 }
-input[type=radio]:not(checked) + label {
-	position: relative;
-	padding: 0 0 0 35px;
-}
-input[type=radio]:not(checked) + label:before {
-	content: '';
-	position: absolute;
-	top: -3px;left: 0;
-	width: 22px;
-	height: 22px;
-	border: 1px solid #f8960b;
-	border-radius: 50%;
-	background: #FFF;
-}
-input[type=radio]:not(checked) + label:after {
-	content: '';
-	position: absolute;
-	top: 4px;
-	left: 7px;
-	width: 10px;
-	height: 10px;
-	border-radius: 50%;
-	background: #f8960b;
-	opacity: 0;
-	transition: all .2s;
-}
-input[type=radio]:checked + label:after {
-	opacity: 1;
+.form__radio-elem:checked  .form__radio-title {
+	color: #f89513;
 }
